@@ -1,5 +1,6 @@
 package com.smartagilify.projectmanagement.entities;
 
+import com.smartagilify.core.entities.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,12 +16,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Project {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Long id;
+public class Project extends BaseEntity {
 
     private String title;
     private Date startDate;

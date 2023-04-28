@@ -1,5 +1,6 @@
 package com.smartagilify.projectmanagement.entities;
 
+import com.smartagilify.core.entities.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,11 +14,8 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PerformanceReport {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Long id;
+public class PerformanceReport extends BaseEntity {
+
     @ManyToOne
     @JoinColumn(name = "project_id")
     private Project project;

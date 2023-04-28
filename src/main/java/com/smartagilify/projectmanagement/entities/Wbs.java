@@ -1,5 +1,6 @@
 package com.smartagilify.projectmanagement.entities;
 
+import com.smartagilify.core.entities.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,11 +15,8 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Wbs {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Long id;
+public class Wbs extends BaseEntity {
+
     @ManyToOne
     @JoinColumn(name = "project_id")
     private Project project;

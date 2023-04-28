@@ -1,5 +1,6 @@
 package com.smartagilify.projectmanagement.entities;
 
+import com.smartagilify.core.entities.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,9 +15,8 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProjectSetting {
-    @Id
-    private Long id;
+public class ProjectSetting extends BaseEntity {
+
     @ManyToMany
     @JoinColumn(name = "project")
     private List<Project> projects;
