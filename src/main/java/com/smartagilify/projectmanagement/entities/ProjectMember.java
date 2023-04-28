@@ -8,7 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "PROJECT_MEMBER")
+@Table(name = "PMS$T_PROJECT_MEMBER")
 @Entity
 @Getter
 @Setter

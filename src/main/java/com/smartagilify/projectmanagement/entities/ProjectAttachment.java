@@ -6,15 +6,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
-@Table(name = "WBS")
+@Table(name = "PMS$T_PROJECT_ATTACHMENT")
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Wbs {
+public class ProjectAttachment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
@@ -22,11 +21,5 @@ public class Wbs {
     @ManyToOne
     @JoinColumn(name = "project_id")
     private Project project;
-    private Date scheduleStartDate;
-    private Date scheduleEndDate;
-    private Date actualStartDate;
-    private Date actualEndDate;
-    private Integer weightPercent;
-    private Integer progressPercent;
 
 }
