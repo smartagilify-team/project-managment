@@ -1,4 +1,4 @@
-package com.smartagilify.projectmanagement.models;
+package com.smartagilify.projectmanagement.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
