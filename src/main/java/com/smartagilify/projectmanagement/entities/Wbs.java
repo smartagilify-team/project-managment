@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.util.Date;
 
 @Table(name = "PMS$T_WBS")
@@ -37,9 +39,13 @@ public class Wbs extends BaseEntity {
     private Date actualEndDate;
 
     @Column(name = "WEIGHT_PERCENT")
-    private Integer weightPercent;
+    @Min(0)
+    @Max(100)
+    private Float weightPercent;
 
+    @Min(0)
+    @Max(100)
     @Column(name = "PROGRESS_PERCENT")
-    private Integer progressPercent;
+    private Float progressPercent;
 
 }

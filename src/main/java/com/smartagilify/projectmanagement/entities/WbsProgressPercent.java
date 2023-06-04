@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 @Table(name = "PMS$T_WBS_PROGRESS_PERCENT")
 @Entity
@@ -25,6 +27,8 @@ public class WbsProgressPercent extends BaseEntity {
     private Wbs wbs;
 
     @Column(name = "PROGRESS_PERCENT")
-    private Integer progressPercent;
+    @Min(0)
+    @Max(100)
+    private Float progressPercent;
 
 }

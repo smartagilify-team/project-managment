@@ -21,6 +21,9 @@ public class ProjectMember extends BaseEntity {
     @JoinColumn(name = "PROJECT_ID", foreignKey = @ForeignKey(name = "FK_PROJECT_MEMBER"))
     private Project project;
 
+    @Column(name = "PERSON_ID")
+    private Long personId;
+
     @Column(name = "ROLE_ID")
     private Long roleId;
 
