@@ -21,16 +21,16 @@ spring:
 
 ---
 spring:
+  profiles:
+    active: dev
+---
+spring:
   config:
     activate:
       on-profile: dev
-app-metadata:
-  environment: development
 
 ---
 spring:
   config:
     activate:
       on-profile: prod
-app-metadata:
-  environment: production
